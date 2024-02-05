@@ -1,14 +1,29 @@
 {
-  "files": [],
-  "references": [
-    {
-      "path": "./tsconfig.node.json"
-    },
-    {
-      "path": "./tsconfig.app.json"
-    },
-    {
-      "path": "./tsconfig.vitest.json"
-    }
+  "compilerOptions": {
+    "target": "esnext",
+    "lib": [
+      "dom",
+      "es2022"
+    ],
+    "module": "esnext",
+    "moduleResolution": "node",
+    "isolatedModules": false,
+    "experimentalDecorators": true,
+    "noImplicitAny": true,
+    "noImplicitThis": true,
+    "strictNullChecks": true,
+    "removeComments": true,
+    "types": [
+      "node",
+      "vite/client"
+    ],
+    // "typeRoots": [],
+  },
+  "compileOnSave": false,
+  "include": [
+    "./src/**/*.ts",
+    "./tsconfig.node.json",
+    "./tsconfig.app.json",
+    "./tsconfig.vitest.json"
   ],
 }
