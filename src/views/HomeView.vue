@@ -3,7 +3,5 @@ import MenuHome from '../components/MenuHome.vue'
 </script>
 
 <template>
-  <main>
-    <MenuHome />
-  </main>
+  <MenuHome />
 </template>

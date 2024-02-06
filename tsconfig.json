@@ -17,7 +17,6 @@
       "node",
       "vite/client"
     ],
-    // "typeRoots": [],
   },
   "compileOnSave": false,
   "include": [
