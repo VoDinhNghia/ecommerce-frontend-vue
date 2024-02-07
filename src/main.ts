@@ -7,10 +7,7 @@ import App from './App.vue'
 import router from './router'
 
 import bootstrapvue3 from 'bootstrap-vue-3'
-
-// since every component imports their bootstrap functionality,
-// the following line is not necessary:
-// import 'bootstrap'
+import 'bootstrap-icons/font/bootstrap-icons.css'
 
 import 'bootstrap/dist/css/bootstrap.css'
 import 'bootstrap-vue-3/dist/bootstrap-vue-3.css'
