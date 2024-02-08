@@ -4,29 +4,7 @@ import { MDBFooter, MDBContainer, MDBRow, MDBCol, MDBIcon } from 'mdb-vue-ui-kit
 
 <template>
   <MDBFooter :text="['center', 'lg-start', 'muted']">
-    <section class="d-flex justify-content-center justify-content-lg-between p-4 border-bottom">
-      <div>
-        <a href="" class="me-4 text-reset">
-          <MDBIcon iconStyle="fab" icon="facebook-f"></MDBIcon>
-        </a>
-        <a href="" class="me-4 text-reset">
-          <MDBIcon iconStyle="fab" icon="twitter"></MDBIcon>
-        </a>
-        <a href="" class="me-4 text-reset">
-          <MDBIcon iconStyle="fab" icon="google"></MDBIcon>
-        </a>
-        <a href="" class="me-4 text-reset">
-          <MDBIcon iconStyle="fab" icon="instagram"></MDBIcon>
-        </a>
-        <a href="" class="me-4 text-reset">
-          <MDBIcon iconStyle="fab" icon="linkedin"></MDBIcon>
-        </a>
-        <a href="" class="me-4 text-reset">
-          <MDBIcon iconStyle="fab" icon="github"></MDBIcon>
-        </a>
-      </div>
-    </section>
-    <section class="">
+    <section class="pt-1">
       <MDBContainer class="text-center text-md-start mt-5">
         <MDBRow class="mt-3">
           <MDBCol md="3" lg="4" xl="3" class="mx-auto mb-4">

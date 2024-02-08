@@ -1,8 +1,12 @@
+<script setup lang='ts'>
+import { routes } from '../constants/constant'
+</script>
+
 <template>
-  <div class="MenuHomePage">
+  <div class="MenuHomePage" id="appp">
     <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
       <div class="container">
-        <a class="navbar-brand" href="">
+        <a class="navbar-brand" v-bind:href="routes.home">
           <img :src="'public/images/D-logo.png'" class="ImgLogoHomePage" />
         </a>
         <button
@@ -28,7 +32,7 @@
               <a class="nav-link text-white" href="">Contact</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link text-white" href="">
+              <a class="nav-link text-white" v-bind:href="routes.login">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="16"
