@@ -1,0 +1,12 @@
+.LoginPageMain {
+  border-radius: 10px;
+  border: 1px solid lightgray;
+}
+.LoginPage .image {
+  min-height: 300px;
+}
+.bg-image {
+  background-image: url('/public/images/login-split.jpg');
+  background-size: cover;
+  background-position: center center;
+}
