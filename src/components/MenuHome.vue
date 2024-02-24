@@ -1,4 +1,4 @@
-<script setup lang='ts'>
+<script setup lang="ts">
 import { routes } from '../constants/constant'
 </script>
 
@@ -23,13 +23,13 @@ import { routes } from '../constants/constant'
         <div class="collapse navbar-collapse" id="navbarTogglerMenuHomePage">
           <ul class="navbar-nav ms-auto">
             <li class="nav-item">
-              <a class="nav-link text-white" href="">Services</a>
+              <a class="nav-link text-white" v-bind:href="routes.services">Services</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link text-white" href="">Tutorial</a>
+              <a class="nav-link text-white" v-bind:href="routes.tutorials">Tutorial</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link text-white" href="">Contact</a>
+              <a class="nav-link text-white" v-bind:href="routes.contact">Contact</a>
             </li>
             <li class="nav-item">
               <a class="nav-link text-white" v-bind:href="routes.login">
@@ -54,7 +54,7 @@ import { routes } from '../constants/constant'
               </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link text-white" href=""
+              <a class="nav-link text-white" v-bind:href="routes.signup"
                 ><svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="16"
