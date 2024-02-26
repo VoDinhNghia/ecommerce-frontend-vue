@@ -5,4 +5,6 @@ export const routes = {
   tutorials: '/tutorials',
   contact: '/contact',
   signup: '/signup',
+  dashboard: '/dashboard',
+  forbiden: '/forbiden',
 }
