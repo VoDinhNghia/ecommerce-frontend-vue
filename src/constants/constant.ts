@@ -7,4 +7,10 @@ export const routes = {
   signup: '/signup',
   dashboard: '/dashboard',
   forbiden: '/forbiden',
+  notfound: '/:pathMatch(.*)*'
+}
+
+export const localStorageItem = {
+  user: 'user',
+  cart: 'cart'
 }
