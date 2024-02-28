@@ -4,11 +4,11 @@ import { IpayLoadLogin, IuserInfo } from '../interfaces/login.interface'
 import { API_URL } from '../constants/constant'
 
 export const setUserInfoToLocalStorage = (user: IuserInfo) => {
-  sessionStorage.setItem(localStorageItem.user, JSON.stringify(user))
+  localStorage.setItem(localStorageItem.user, JSON.stringify(user))
 }
 
 export const getCurrentUser = () => {
-  const user = sessionStorage.getItem(localStorageItem.user)
+  const user = localStorage.getItem(localStorageItem.user)
   return user ? JSON.parse(user) : {}
 }
 

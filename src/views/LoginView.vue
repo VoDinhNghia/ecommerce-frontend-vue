@@ -16,15 +16,15 @@ import FooterPage from '../components/FooterPage.vue'
                   <h3 class="display-4 text-center mb-3">Login</h3>
                   <form>
                     <div class="mb-3">
-                      <input id="inputEmail" type="email" placeholder="Email address" required="true" autofocus="true"
-                        class="form-control rounded-pill border-0 shadow-sm px-4" />
+                      <input id="inputEmail" v-model="email" type="email" placeholder="Email address" required="true"
+                        autofocus="true" class="form-control rounded-pill border-0 shadow-sm px-4" />
                     </div>
                     <div class="mb-3">
-                      <input id="inputPassword" type="password" placeholder="Password" required="true"
+                      <input id="inputPassword" v-model="password" type="password" placeholder="Password" required="true"
                         class="form-control rounded-pill border-0 shadow-sm px-4 text-primary" />
                     </div>
                     <div class="d-grid gap-2 mt-2">
-                      <button type="submit"
+                      <button @click="loginHandle" type="button"
                         class="btn btn-primary btn-block text-uppercase mb-2 rounded-pill shadow-sm">Sign in</button>
                     </div>
                   </form>
@@ -39,4 +39,31 @@ import FooterPage from '../components/FooterPage.vue'
   </div>
 </template>
 
-<style>@import "../assets/login.css";</style>
+<style>
+@import "../assets/login.css";
+</style>
+<script lang="ts">
+import { defineComponent } from "vue";
+import { login } from '../services/authen.service'
+import { routes } from '../constants/constant'
+
+export default defineComponent({
+  name: "LoginView",
+  data() {
+    return {
+      email: '',
+      password: ''
+    }
+  },
+  methods: {
+    async loginHandle() {
+      const data = await login({ email: this.email, password: this.password })
+      if (data?.statusCode === 200) {
+        this.$router.push({ path: routes.dashboard });
+      } else {
+        this.$router.push({ path: routes.login });
+      }
+    }
+  }
+});
+</script>
