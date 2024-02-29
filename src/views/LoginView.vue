@@ -15,17 +15,36 @@ import FooterPage from '../components/FooterPage.vue'
                 <div class="col-lg-10 col-xl-7 mx-auto">
                   <h3 class="display-4 text-center mb-3">Login</h3>
                   <form>
+                    <p v-if="error" class="text-center text-danger">{{ error }}</p>
                     <div class="mb-3">
-                      <input id="inputEmail" v-model="email" type="email" placeholder="Email address" required="true"
-                        autofocus="true" class="form-control rounded-pill border-0 shadow-sm px-4" />
+                      <input
+                        id="inputEmail"
+                        v-model="email"
+                        type="email"
+                        placeholder="Email address"
+                        required="true"
+                        autofocus="true"
+                        class="form-control rounded-pill border-0 shadow-sm px-4"
+                      />
                     </div>
                     <div class="mb-3">
-                      <input id="inputPassword" v-model="password" type="password" placeholder="Password" required="true"
-                        class="form-control rounded-pill border-0 shadow-sm px-4 text-primary" />
+                      <input
+                        id="inputPassword"
+                        v-model="password"
+                        type="password"
+                        placeholder="Password"
+                        required="true"
+                        class="form-control rounded-pill border-0 shadow-sm px-4 text-primary"
+                      />
                     </div>
                     <div class="d-grid gap-2 mt-2">
-                      <button @click="loginHandle" type="button"
-                        class="btn btn-primary btn-block text-uppercase mb-2 rounded-pill shadow-sm">Sign in</button>
+                      <button
+                        @click="loginHandle"
+                        type="button"
+                        class="btn btn-primary btn-block text-uppercase mb-2 rounded-pill shadow-sm"
+                      >
+                        Sign in
+                      </button>
                     </div>
                   </form>
                 </div>
@@ -40,17 +59,18 @@ import FooterPage from '../components/FooterPage.vue'
 </template>
 
 <style>
-@import "../assets/login.css";
+@import '../assets/login.css';
 </style>
 <script lang="ts">
-import { defineComponent } from "vue";
+import { defineComponent } from 'vue'
 import { login } from '../services/authen.service'
 import { routes } from '../constants/constant'
 
 export default defineComponent({
-  name: "LoginView",
+  name: 'LoginView',
   data() {
     return {
+      error: '',
       email: '',
       password: ''
     }
@@ -59,11 +79,11 @@ export default defineComponent({
     async loginHandle() {
       const data = await login({ email: this.email, password: this.password })
       if (data?.statusCode === 200) {
-        this.$router.push({ path: routes.dashboard });
+        this.$router.push({ path: routes.dashboard })
       } else {
-        this.$router.push({ path: routes.login });
+        this.error = data?.message
       }
     }
   }
-});
+})
 </script>
