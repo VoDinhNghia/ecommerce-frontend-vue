@@ -9,7 +9,7 @@ export const setUserInfoToLocalStorage = (user: IuserInfo) => {
 
 export const getCurrentUser = () => {
   const user = localStorage.getItem(localStorageItem.user)
-  return user ? JSON.parse(user) : {}
+  return user ? JSON.parse(user) : null
 }
 
 export const setHeaderAxios = () => {

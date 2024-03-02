@@ -46,6 +46,14 @@ import FooterPage from '../components/FooterPage.vue'
                         Sign in
                       </button>
                     </div>
+                    <div>
+                      <span>
+                        <a class="text-primary text-decoration-none">Forget password?</a> or
+                        <a class="text-primary text-decoration-none" v-bind:href="routes.signup">
+                          Create new account</a
+                        >
+                      </span>
+                    </div>
                   </form>
                 </div>
               </div>
