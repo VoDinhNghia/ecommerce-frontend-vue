@@ -67,7 +67,7 @@ import FooterPage from '../components/FooterPage.vue'
 </template>
 
 <style>
-@import '../assets/login.css';
+@import '../assets/login.scss';
 </style>
 <script lang="ts">
 import { defineComponent } from 'vue'

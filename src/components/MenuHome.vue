@@ -88,5 +88,5 @@ const logout = () => {
 </template>
 
 <style>
-@import '../assets/menu.css';
+@import '../assets/menu.scss';
 </style>

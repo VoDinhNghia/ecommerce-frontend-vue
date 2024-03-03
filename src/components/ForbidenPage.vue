@@ -9,5 +9,5 @@ import FooterPage from './FooterPage.vue'
 </template>
 
 <style>
-@import '../assets/notfound.css';
+@import '../assets/notfound.scss';
 </style>
