@@ -1,7 +1,12 @@
 <script setup lang="ts">
 import { routes } from '../constants/constant'
-import { getCurrentUser } from '../services/authen.service'
-const userName = `${getCurrentUser()?.lastName} ${getCurrentUser()?.middleName || ''} ${getCurrentUser()?.firstName}`
+import { getCurrentUser, logOut } from '../services/authen.service'
+const userInfo = getCurrentUser()
+const userName = `${userInfo?.lastName} ${userInfo?.middleName || ''} ${userInfo?.firstName}`
+const logout = () => {
+  logOut()
+  window.location.reload()
+}
 </script>
 
 <template>
@@ -33,7 +38,7 @@ const userName = `${getCurrentUser()?.lastName} ${getCurrentUser()?.middleName |
             <li class="nav-item">
               <a class="nav-link text-white" v-bind:href="routes.contact">Contact</a>
             </li>
-            <li v-if="!getCurrentUser()" class="nav-item">
+            <li v-if="!userInfo" class="nav-item">
               <a class="nav-link text-white" v-bind:href="routes.login">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -61,7 +66,7 @@ const userName = `${getCurrentUser()?.lastName} ${getCurrentUser()?.middleName |
                 <span class="translate-middle badge rounded-pill bg-danger"> 99 </span></a
               >
             </li>
-            <b-nav-item-dropdown variant="success" v-if="getCurrentUser()" right>
+            <b-nav-item-dropdown variant="success" v-if="userInfo" right>
               <template #button-content>
                 <img :src="'public/images/userIcon.jpg'" class="IconUserProfile" /> {{ userName }}
               </template>
@@ -71,7 +76,7 @@ const userName = `${getCurrentUser()?.lastName} ${getCurrentUser()?.middleName |
               <b-dropdown-item v-bind:href="routes.dashboard"
                 ><i class="bi bi-person-fill-gear text-success"></i> Profile</b-dropdown-item
               >
-              <b-dropdown-item href="#"
+              <b-dropdown-item href="#" @click="logout()"
                 ><i class="bi bi-box-arrow-left text-danger"></i> SignOut</b-dropdown-item
               >
             </b-nav-item-dropdown>

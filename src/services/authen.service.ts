@@ -43,5 +43,5 @@ export const login = async (payload: IpayLoadLogin) => {
 }
 
 export const logOut = () => {
-  sessionStorage.clear()
+  localStorage.clear()
 }
