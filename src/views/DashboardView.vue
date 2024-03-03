@@ -1,8 +1,15 @@
 <script setup lang="ts">
-import FooterPage from '../components/FooterPage.vue';
+import FooterPage from '../components/FooterPage.vue'
+import MenuDashboardPages from '../components/MenuDashboardPage.vue'
 </script>
 <template>
-  <h1>dashboard page</h1>
+  <div class="Dashboard">
+    <MenuDashboardPages />
+    <h1 class="ps-3">Content</h1>
+  </div>
   <FooterPage />
 </template>
 
+<style lang="scss">
+@import '../assets/dashboard.scss';
+</style>
