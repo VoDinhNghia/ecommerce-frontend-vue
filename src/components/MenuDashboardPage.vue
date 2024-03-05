@@ -3,10 +3,9 @@ import { logOut } from '../services/authen.service'
 import { ref } from 'vue'
 import { routes } from '../constants/constant'
 import { getCurrentUser } from '../services/authen.service'
-const is_expanded = ref(localStorage.getItem('is_expanded') === 'true')
+const is_expanded = ref(true)
 const ToggleMenu = () => {
   is_expanded.value = !is_expanded.value
-  localStorage.setItem('is_expanded', String(is_expanded.value))
 }
 const logout = () => {
   logOut()
