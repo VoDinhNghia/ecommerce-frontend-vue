@@ -50,7 +50,7 @@ const userName = `${currentUser?.lastName} ${currentUser?.middleName || ''} ${cu
             >
           </li>
           <li class="nav-item">
-            <a class="nav-link" aria-current="page" :href="routes.userInfo"
+            <a class="nav-link" aria-current="page" :href="routes.dashboard"
               ><i class="bi bi-gear-fill text-primary pe-3"></i>Slide Image Adv</a
             >
           </li>

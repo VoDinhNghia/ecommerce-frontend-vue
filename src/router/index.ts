@@ -5,6 +5,7 @@ import { routes, localStorageItem } from '../constants/constant'
 import NotFoundPage from '../components/NotFoundPage.vue'
 import DashboardView from '../views/DashboardView.vue'
 import ForbidenPage from '../components/ForbidenPage.vue'
+import SettingUserInfoView from '../views/SettingUserInfoView.vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -23,6 +24,11 @@ const router = createRouter({
       path: routes.dashboard,
       name: routes.dashboard,
       component: DashboardView
+    },
+    {
+      path: routes.userInfo,
+      name: routes.userInfo,
+      component: SettingUserInfoView
     },
     {
       path: routes.forbiden,
