@@ -30,6 +30,32 @@ const userName = `${currentUser?.lastName} ${currentUser?.middleName || ''} ${cu
         <span class="pe-3"><i class="bi bi-house-door"></i></span>
         <span v-if="is_expanded" class="material-icons">Home</span>
       </router-link>
+      <button
+        class="navbar-toggler buttonMenuSettingDashboard"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="pe-3 text-primary"><i class="bi bi-gear"></i></span>
+        <span v-if="is_expanded" class="material-icons">Settings</span>
+      </button>
+      <div class="collapse navbar-collapse ps-4 menuSecondarySetting" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link" aria-current="page" :href="routes.userInfo"
+              ><i class="bi bi-person-fill-gear text-primary pe-3"></i>Profile</a
+            >
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" aria-current="page" :href="routes.userInfo"
+              ><i class="bi bi-gear-fill text-primary pe-3"></i>Slide Image Adv</a
+            >
+          </li>
+        </ul>
+      </div>
       <a class="buttonMenuDashboard" v-on:click="logout()">
         <span class="pe-3"><i class="bi bi-box-arrow-in-left"></i></span>
         <span v-if="is_expanded" class="material-icons">SignOut</span>

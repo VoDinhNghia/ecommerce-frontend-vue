@@ -79,6 +79,29 @@ aside {
           }
         }
       }
+      .buttonMenuSettingDashboard {
+        width: 100%;
+        height: 42px;
+        font-size: 18px;
+        display: flex;
+        align-items: center;
+        text-decoration: none;
+  
+        transition: 0.2s ease-in-out;
+        padding: 0.5rem 1rem;
+
+        &:hover {
+          background-color: var(--dark-alt);
+  
+          .material-icons,
+          .text {
+            color: var(--primary);
+          }
+        }
+      }
+      .menuSecondarySetting {
+        font-size: 18px;
+      }
     }
   
     .footer {
