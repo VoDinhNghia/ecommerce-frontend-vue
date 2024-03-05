@@ -3,7 +3,7 @@ import FooterPage from '../components/FooterPage.vue'
 import MenuDashboardPages from '../components/MenuDashboardPage.vue'
 </script>
 <template>
-  <div class="Dashboard">
+  <div class="Dashboard mb-2">
     <MenuDashboardPages />
     <h1 class="ps-3">Content</h1>
   </div>

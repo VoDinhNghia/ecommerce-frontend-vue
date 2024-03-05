@@ -7,7 +7,8 @@ export const routes = {
   signup: '/signup',
   dashboard: '/dashboard',
   forbiden: '/forbiden',
-  notfound: '/:pathMatch(.*)*'
+  notfound: '/:pathMatch(.*)*',
+  userInfo: '/user-info',
 }
 
 export const localStorageItem = {
