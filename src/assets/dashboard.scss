@@ -34,3 +34,12 @@ button {
   height: 30px;
   border-radius: 50%;
 }
+
+.SettingUserInfo {
+  width: 90%;
+  background-image: url("../../public/images/background-dashboard.jpg");
+  .card {
+    width: 98%; 
+    height: auto;
+  }
+}

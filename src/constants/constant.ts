@@ -17,3 +17,8 @@ export const localStorageItem = {
 }
 
 export const API_URL = process.env.VUE_APP_ROOT_API
+
+export const userRoles = {
+  SUPPER_ADMIN: "SUPPER_ADMIN",
+  USER: "USER"
+}

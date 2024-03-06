@@ -3,6 +3,7 @@ import { logOut } from '../services/authen.service'
 import { ref } from 'vue'
 import { routes } from '../constants/constant'
 import { getCurrentUser } from '../services/authen.service'
+import { isRoleSa } from '../utils/permisson.util'
 const is_expanded = ref(true)
 const ToggleMenu = () => {
   is_expanded.value = !is_expanded.value
@@ -49,7 +50,7 @@ const userName = `${currentUser?.lastName} ${currentUser?.middleName || ''} ${cu
               ><i class="bi bi-person-fill-gear text-primary pe-3"></i>Profile</a
             >
           </li>
-          <li class="nav-item">
+          <li v-if="isRoleSa()" class="nav-item">
             <a class="nav-link" aria-current="page" :href="routes.dashboard"
               ><i class="bi bi-gear-fill text-primary pe-3"></i>Slide Image Adv</a
             >
