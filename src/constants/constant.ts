@@ -9,6 +9,7 @@ export const routes = {
   forbiden: '/forbiden',
   notfound: '/:pathMatch(.*)*',
   userInfo: '/user-info',
+  userMgt: '/user-mgt',
 }
 
 export const localStorageItem = {

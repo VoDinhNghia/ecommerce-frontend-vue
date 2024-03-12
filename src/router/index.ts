@@ -6,6 +6,7 @@ import NotFoundPage from '../components/NotFoundPage.vue'
 import DashboardView from '../views/DashboardView.vue'
 import ForbidenPage from '../components/ForbidenPage.vue'
 import SettingUserInfoView from '../views/SettingUserInfoView.vue'
+import UserManagementView from '../views/UserManagementView.vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -19,6 +20,11 @@ const router = createRouter({
       path: routes.login,
       name: routes.login,
       component: LoginView
+    },
+    {
+      path: routes.userMgt,
+      name: routes.userMgt,
+      component: UserManagementView,
     },
     {
       path: routes.dashboard,

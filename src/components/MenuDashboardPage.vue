@@ -31,6 +31,10 @@ const userName = `${currentUser?.lastName} ${currentUser?.middleName || ''} ${cu
         <span class="pe-3"><i class="bi bi-house-door"></i></span>
         <span v-if="is_expanded" class="material-icons">Home</span>
       </router-link>
+      <router-link v-if="isRoleSa()" :to="routes.userMgt" class="buttonMenuDashboard">
+        <span class="pe-3"><i class="bi bi-person-lines-fill"></i></span>
+        <span v-if="is_expanded" class="material-icons">User Management</span>
+      </router-link>
       <button
         class="navbar-toggler buttonMenuSettingDashboard"
         type="button"
